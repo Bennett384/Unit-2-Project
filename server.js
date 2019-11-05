@@ -7,6 +7,7 @@ const mongoose = require('mongoose')
 const app = express()
 const db = mongoose.connection
 require('dotenv').config()
+const Route = require('./models/routes.js')
 //===================================
 //PORT
 //===================================
@@ -26,9 +27,16 @@ app.use(methodOverride('_method'))
 //===================================
 //Routes
 //===================================
-app.get('/', (req, res) => {
-    res.send('Hello World!')
+app.get('/routes', (req, res) => {
+    Route.find({}, (error, allRoutes) => {
+        res.render('index.ejs',
+    {
+        routes: allRoutes
+    })
+    })
+
 })
+
 
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));

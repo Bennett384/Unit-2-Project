@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1> Rock Climbing Routes </h1>
+        <a href="/routes/new">Add A New Route </a></br>
+        <% for(let i = 0; i < routes.length; i++){%>
+            <a href="/routes/<%=routes[i].id%>">
+                <p><%=routes[i].name%></p>
+            </a></br>
+        <%}%>
+    </body>
+</html>
