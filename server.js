@@ -40,7 +40,6 @@ app.use(methodOverride('_method'))
 //populate req.body with parsed info from forms
 app.use(express.urlencoded({ extended: false}))
 app.use((req, res, next)  => {
-    console.log("I fun for all routes");
     next();
 })
 //use public folder for static assests
