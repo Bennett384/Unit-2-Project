@@ -6,8 +6,18 @@ const methodOverride = require('method-override')
 const mongoose = require('mongoose')
 const app = express()
 const db = mongoose.connection
+const session = require('express-session')
 require('dotenv').config()
-const Route = require('./models/routes.js')
+
+const routesController = require('./controllers/routes.js')
+
+
+const usersController = require('./controllers/users.js');
+
+
+const sessionsController = require('./controllers/sessions.js')
+
+
 
 
 //===================================
@@ -35,64 +45,21 @@ app.use((req, res, next)  => {
 })
 //use public folder for static assests
 app.use(express.static('public'))
+app.use(session({
+    secret: "feedmeseymour",
+    resave: false,
+    saveUnitialized: false
+}))
+app.use('/sessions', sessionsController)
+app.use('/users', usersController)
+app.use('/routes', routesController)
 
-//===================================
-//Routes
-//===================================
-//New Routes Page
-app.get('/routes/new', (req, res) => {
-    res.render('new.ejs')
+app.get('/', (req, res) => {
+    res.render('welcome.ejs')
 })
 
-//Edit Page
-app.get('/routes/:id/edit', (req, res) => {
-    Route.findById(req.params.id, (error, foundRoute) => {
-        res.render('edit.ejs', {
-            routes: foundRoute
-        })
-    })
-})
 
-app.delete('/routes/:id', (req, res) => {
-    Route.findByIdAndRemove(req.params.id, (error, data) => {
-        console.log(data);
-        res.redirect('/routes')
-    })
-})
 
-//create new route
-app.post('/routes', (req, res) => {
-    Route.create(req.body, (error, createdRoute) => {
-        res.redirect('/routes')
-    })
-})
-
-//update route
-app.put('/routes/:id', (req, res) => {
-    Route.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updateModel) => {
-        res.redirect('/routes')
-    })
-})
-
-//Index Page
-app.get('/routes', (req, res) => {
-    Route.find({}, (error, allRoutes) => {
-        res.render('index.ejs',
-    {
-        routes: allRoutes
-    })
-    })
-
-})
-
-//Show Page
-app.get('/routes/:id', (req, res) => {
-    Route.findById(req.params.id, (error, foundRoute) => {
-        res.render('show.ejs',{
-            routes: foundRoute
-        })
-    })
-})
 
 
 
