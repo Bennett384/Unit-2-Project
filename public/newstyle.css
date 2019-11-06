@@ -1,0 +1,15 @@
+body {
+    background-image: url("https://lh3.googleusercontent.com/GEwxSpU7eCsjBitQYTrMo2XUNj2iyLGTrm5jzWNs3kix1o6g6VJcVjBmf8in3D2XyzXbOpz_Aaa_VE_Hs5-yXvHV6WYs-J4H-18Re_DxlAte8OA6-W3l2fZJRfxk9ilcuDWzN0oard1X8ygDa5Dh_wu5VBTiBRFKkaQEYuppyfTFNQCoRYFf5CA-B-IoCcOErTcMf0m1ruwWOVMsTwdpGIfrN0bpG583PzQLvZLyW6Smqq3IzLPh2FLC_LispJOHEKDnShqoPLu1bvB4hyBIoMNdeNjfja-9prY31l_yw0PNumU5z8khGf0L9ZX7RtV0XTWSbUQbhbVJdTyDOECDblndGiTdOekpPS4YzEBguFhOsWSOpPEDc24qY5sJCNmfEUL5umRYoe12_9WCE7LGgAOBWas11op7wONDKvEZ5hOYr95u6J7_XSWz1nF7aje_Mp6_Ve9WE1gYP798r29TOqvjJ-RcTvAZWkbkoYg5P15UGZdVGVl21vqVGWY6z9ENDc6G5L-itLFoq_TmlrPs-5Nkt8_p8947gGnGFE3GCyuCEI-NZeBucEsuCK1m1CJQCrJ3YOBPBpYclQQlmS4aJeNe92Wx9QG7YN9bFXmJdXsDmAH-sH_Z3xErAYW-MDqYGulbnDcCNjeRCwxzU50-HKUNfSK7-yvjIVXAE4PvWXoGGK44qULt5Fw=w660-h880-no");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+form{
+    text-align: center;
+    color: white;
+}

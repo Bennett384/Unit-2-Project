@@ -5,12 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title></title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/newstyle.css">
     </head>
     <body>
         <h1>Add Your Route</h1>
         <form action="/routes" method="POST">
+            <div class="form-group">
             Name: <input type="text" name="name"/></br>
-            Description: <input type="text" name="description"/></br>
+            Description: <input type="textarea" name="description"/></br>
             Rating: <input type="text" name="rating"/></br>
             Location: <input type="text" name="location"/></br>
             Height: <input type="number" name="height"/></br>
@@ -18,6 +20,7 @@
             Bolts: <input type="number" name="bolts"/></br>
             Rock Type: <input type="text" name="rockType"/></br>
             <input type="submit" value="Create Route"/>
+        </div>
         </form>
         <a href="/routes">Back To Routes Page</a>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
