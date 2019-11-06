@@ -7,13 +7,14 @@
     <body>
         <h1> Edit Route Page </h1>
         <form action="/routes/<%=routes.id%>?_method=PUT" method="POST">
-            Name: <input type="text" name="name"/></br>
-            Description: <input type="text" name="description"/></br>
-            Location: <input type="text" name="location"/></br>
-            Height: <input type="number" name="height"/></br>
-            Anchors: <input type="text" name="anchors"/></br>
-            Bolts: <input type="number" name="bolts"/></br>
-            Rock Type: <input type="text" name="rockType"/></br>
+            Name: <input type="text" name="name" value="<%=routes.name%>"/></br>
+            Description: <input type="text" name="description" value="<%=routes.description%>"/></br>
+            Rating: <input type="text" name="rating" value="<%=routes.rating%>"/></br>
+            Location: <input type="text" name="location" value="<%=routes.location%>"/></br>
+            Height: <input type="number" name="height" value="<%=routes.height%>"/></br>
+            Anchors: <input type="text" name="anchors" value="<%=routes.anchors%>"/></br>
+            Bolts: <input type="number" name="bolts" value="<%=routes.bolts%>"/></br>
+            Rock Type: <input type="text" name="rockType" value="<%=routes.rockType%>"/></br>
             <input type="submit" value="Submit Changes"/>
         </form>
         <a href="/routes">Back To Routes</a>
