@@ -43,12 +43,20 @@ app.use(express.static('public'))
 app.get('/routes/new', (req, res) => {
     res.render('new.ejs')
 })
+
 //Edit Page
 app.get('/routes/:id/edit', (req, res) => {
     Route.findById(req.params.id, (error, foundRoute) => {
         res.render('edit.ejs', {
             routes: foundRoute
         })
+    })
+})
+
+app.delete('/routes/:id', (req, res) => {
+    Route.findByIdAndRemove(req.params.id, (error, data) => {
+        console.log(data);
+        res.redirect('/routes')
     })
 })
 
