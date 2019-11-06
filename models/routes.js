@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 
 const routeSchema = new mongoose.Schema({
-    name: {type: String},
+    name: {type: String, required: true, unique: true},
     description: {type: String},
     location: {type: String},
     height: {type: Number},
     anchors: {type: String},
     bolts: {type: Number},
-    rockType: {type: String},
+    rockType: {type: String}
 }, {timestamp: true})
 
 const Route = mongoose.model('Route', routeSchema);
