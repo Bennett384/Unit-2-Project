@@ -43,10 +43,25 @@ app.use(express.static('public'))
 app.get('/routes/new', (req, res) => {
     res.render('new.ejs')
 })
+//Edit Page
+app.get('/routes/:id/edit', (req, res) => {
+    Route.findById(req.params.id, (error, foundRoute) => {
+        res.render('edit.ejs', {
+            routes: foundRoute
+        })
+    })
+})
 
 //create new route
 app.post('/routes', (req, res) => {
     Route.create(req.body, (error, createdRoute) => {
+        res.redirect('/routes')
+    })
+})
+
+//update route
+app.put('/routes/:id', (req, res) => {
+    Route.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updateModel) => {
         res.redirect('/routes')
     })
 })
@@ -70,6 +85,8 @@ app.get('/routes/:id', (req, res) => {
         })
     })
 })
+
+
 
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
