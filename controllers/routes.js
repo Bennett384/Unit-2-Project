@@ -2,6 +2,46 @@ const express = require('express')
 const Route = require('../models/routes.js')
 const router = express.Router();
 
+//==================================
+//seed data
+//==================================
+router.get('/seed', (req, res) => {
+    Route.create(
+        [
+            {
+                name: "Differential Equations",
+                description: "This enjoyable new moderate climbs the obvious orange flake left of The Wasp",
+                rating: 5.9,
+                location: "Lincoln Lake, Arkansas",
+                height: 35,
+                anchors: "Bolt Anchors",
+                bolts: 4,
+                rockType: "SandStone"
+            },
+            {
+                name: "Lincoln It Up",
+                description: "Excellent face climbing protected by one of Lincoln's infamous bolt jobs. This route contains two notable runouts: one getting to the first bolt and the other getting to the anchors. Both are moderate in difficulty, but could have serious consequences. A recent hold break has upped the grade from a 5.9.",
+                rating: 5.10,
+                location: "Lincoln Lake, Arkansas",
+                height: 40,
+                anchors: "Bolt Anchors",
+                bolts: 3,
+                rockType: "SandStone"
+            },
+            {
+                name: "Smeaglin' It Up",
+                description: "A hard move past the first bolt leads to moderate climbing on good holds, some of which are quite hollow. The crux can be avoided by traversing in from the right- this version is more like 5.8",
+                rating: 5.10,
+                location: "Lincoln Lake, Arkansas",
+                height: 30,
+                anchors: "Bolt Anchors",
+                bolts: 3,
+                rockType: "SandStone"
+            }
+        ]
+    )
+})
+
 //===================================
 //Routes
 //===================================
