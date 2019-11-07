@@ -10,13 +10,14 @@
     <body>
         <h1> Rock Climbing Routes </h1>
         <nav>
-        <a href="/routes/new">Add A New Route </a></br>
+        <a href="/routes/new">Add A New Route </a>
         <form action="/sessions/destroy?_method=DELETE" method="POST">
             <input type="submit" value="Log Out">
         </form>
     </nav>
+    <div class="routes">
         <% for(let i = 0; i < routes.length; i++){%>
-            <div class="routes">
+
             <a href="/routes/<%=routes[i].id%>">
                 <p><%=routes[i].name%></p>
             </a></br>
