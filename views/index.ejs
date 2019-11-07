@@ -14,10 +14,26 @@
         <%}%></h2>
 
         <nav>
-        <a href="/routes/new">Add A New Route </a>
-        <form action="/sessions/destroy?_method=DELETE" method="POST">
-            <input type="submit" value="Log Out">
+        <a class="btn btn-primary" href="/routes/new" role="button">Add A New Route </a>
         </form>
+        <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#myModal">Contact Me</button>
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Contact Me</h4>
+            </div>
+            <div class="modal-body">
+                <a href="mailto:jamesbennett384@hotmail.com">jamesbennett384@hotmail.com</a></br>
+                <a href="https://www.linkedin.com/in/jamesbennett384/">LinkedIn</a></br>
+                <!-- <a href="https://github.com/Bennett384">My Github</a> -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
     </nav>
     <div class="routes">
         <% for(let i = 0; i < routes.length; i++){%>
@@ -27,6 +43,8 @@
             </a></br>
         <%}%>
     </div>
+    <form action="/sessions/destroy?_method=DELETE" method="POST">
+        <input type="submit" value="Log Out">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
