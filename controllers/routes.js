@@ -85,7 +85,8 @@ router.get('/', (req, res) => {
     Route.find({}, (error, allRoutes) => {
         res.render('index.ejs',
     {
-        routes: allRoutes
+        routes: allRoutes,
+        username:req.session.username
     })
     })
 

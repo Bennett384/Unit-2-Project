@@ -9,6 +9,10 @@
     </head>
     <body>
         <h1> Rock Climbing Routes </h1>
+        <h2> <% if(username){%>
+            Welcome, <%=username%>
+        <%}%></h2>
+
         <nav>
         <a href="/routes/new">Add A New Route </a>
         <form action="/sessions/destroy?_method=DELETE" method="POST">
