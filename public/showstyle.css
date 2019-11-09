@@ -2,14 +2,22 @@ body {
     background: #484848;
 }
 h1 {
-    color: white;
+    color: lightgrey;
     text-align: center;
 }
 
 h2 {
-    color: white;
+    color: lightgrey;
 }
 
 h3 {
-    color: white;
+    color: lightgrey;
+}
+
+li {
+    color: lightgrey;
+}
+
+p {
+    color: lightgrey;
 }
