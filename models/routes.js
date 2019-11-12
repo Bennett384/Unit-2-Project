@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const routeSchema = new mongoose.Schema({
-    name: {type: String, required: true, unique: true},
+    name: {type: String, required: true},
     description: {type: String},
     rating: {type: String},
     image: {type: String},

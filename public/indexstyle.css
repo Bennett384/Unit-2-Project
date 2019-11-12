@@ -33,4 +33,6 @@ h2 {
 nav {
     display: flex;
     justify-content: space-around;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3IVrSo-16OJIYsE4mw2InX4tJ77dhlTfH6l0PiAuT_bV7KMuqPw&s");
+    background-size: auto;
 }

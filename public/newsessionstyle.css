@@ -1,12 +1,20 @@
 body {
-    background: #484848;
+    background-image: url("https://media.istockphoto.com/vectors/rock-climbing-vector-id165926816?k=6&m=165926816&s=612x612&w=0&h=N9UMgBFdb2XOC_TWTwuuvBBJOaUOwTSWOtKvgEwXDGY=");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 h1 {
-    color: white;
+    color: red;
     text-align: center;
 }
 
 form {
     text-align: center;
+}
+
+.color {
+    background-color: lightgrey;
+    text: black;
 }
