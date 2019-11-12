@@ -42,7 +42,7 @@
         <div class="routes">
         <% for(let i = 0; i < routes.length; i++){%>
             <a href="/routes/<%=routes[i].id%>">
-            <img class="img" src="https://timeincsecure-a.akamaihd.net/rtmp_uds/293884104/201802/2722/293884104_5734513705001_5734514095001-th.jpg?pubId=293884104&videoId=5734514095001" alt="Route Image"></br>
+            <img src="<%=routes[i].image%>" alt="route"/>
                 <p><%=routes[i].name%></p>
             </a>
         <%}%>
