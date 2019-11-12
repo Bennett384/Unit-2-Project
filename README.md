@@ -11,3 +11,5 @@ Someway to leave a rating 1-5 and average all the users ratings to give an updat
 Someway to leave comments or reviews of the routes..
 
 Users must sign in to make any changes to the routes and only authorized users can delete the routes.
+
+Want to add a log list on the show page so I can keep track of the times ive climbed it and how it went.
